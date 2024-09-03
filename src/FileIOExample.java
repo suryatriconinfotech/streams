@@ -27,7 +27,7 @@ public class FileIOExample {
         }
 
 
-        //String contentToWrite = "This is a sample text to write into the file.";
+       
 
         try {
             FileOutputStream fos = new FileOutputStream(outputFilePath);
