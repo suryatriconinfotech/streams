@@ -7,13 +7,14 @@ public class FileIOExample {
         String inputFilePath ="./input.txt";
         String outputFilePath = "./output.txt";
 
-
+        String contentToWrite="";
         try {
             FileInputStream fis = new FileInputStream(inputFilePath);
             BufferedReader br = new BufferedReader(new InputStreamReader(fis));
             String line;
             while ((line = br.readLine()) != null) {
                 System.out.println("Read from file: " + line);
+                contentToWrite+=line;
             }
             br.close();
             fis.close();
@@ -26,7 +27,7 @@ public class FileIOExample {
         }
 
 
-        String contentToWrite = "This is a sample text to write into the file.";
+        //String contentToWrite = "This is a sample text to write into the file.";
 
         try {
             FileOutputStream fos = new FileOutputStream(outputFilePath);
